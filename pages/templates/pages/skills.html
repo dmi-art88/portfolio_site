@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1>My Skills:</h1>
+    <div class="row">
+        {% for skill in skills %}
+            <div class="col-md-4">
+                <div class="card mb2">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ skill.title }}</h5>
+                        <p class="card-text">{{ skill.description }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock body %}
